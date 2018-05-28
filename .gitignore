@@ -1,6 +1,7 @@
 # ignore everything in the root except the "wp-content" directory.
 /*
 !wp-content/
+!mackerelcrow-static
 
 # ignore everything in the "wp-content" directory, except:
 # mu-plugins, plugins, and themes directories
@@ -65,6 +66,7 @@ Thumbs.db
 !README.md
 !CHANGELOG.md
 !composer.json
+!./mackerelcrow-static/*
 
 # track favicon files, if they exist
 !android-chrome-*.png
