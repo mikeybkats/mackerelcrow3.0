@@ -1,24 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css');
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  color: black;
+  margin: 0px;
+  font-size: 14px;
 }
 
 a {
   color: rgba(#000, 0.7);
-
   &:focus,
   &:hover {
     color: rgba(#000, 0.6);
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.circle {
+  width: 100px;
+	height: 100px;
+	background: #EEB0BF;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+a.instagram-link {
+  width: 40px;
+  height: 40px;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+  display: flex;
+  img {
+    margin: 0px auto;
+  }
+  transition: background ease 1s;
+}
+
+a:hover {
+  width: 40px;
+	height: 40px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background: #EEB0BF;
+}
+
+section.info-section {
+  height: 97vh;
+  width: 98%; 
+  padding-bottom: 140px;
+}
+@media screen and (max-width: 780px){
+  section.info-section {
+    height: unset;
+  }
+}
+
+.info{
+  .contact, .title {
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 5px;
+    padding-right: 50px;
+  }
+  .contact {
+    background: white;
+    opacity: .7;
+  }
+  @media screen and (max-width: 780px){
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      padding-top: 5px;
+      padding-right: 50px;
+    }
+  }
+}
+
+.featured-image { 
+  position: absolute;
+  z-index: 100;
+  top: 35%;
+  left: 0px;
+  img{
+    max-width: 570px;
+  }
+}
+
+
+@media screen and (min-width: 781px){
+  .featured-image {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  .featured-image {
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 780px){
+  .featured-image {
+    position: relative;
+    //img { 
+      //max-width: 440px;
+    //}
+  }
+}
+
+.heading {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.to-order {
+  margin-top: 25px;
+}
+
+.instagram {
+  margin-left: -8px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 480px){
+  p {
+    font-size: 18px;
+  }
+
+  section.featured-image img {
+    width: 100%;
+    margin-left: -10px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .contact {
+    margin-top: 30px;
+  }
+
+  .instagram {
+    margin-left: 85%;
+    margin-top: 30px;
+  }
+
+  a.instagram-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  a.instagram-link img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+#svg {
+  overflow: visible;
+  width: 100%;
 }
